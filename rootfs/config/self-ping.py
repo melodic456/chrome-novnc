@@ -21,11 +21,11 @@ if __name__ == "__main__":
     
     # Open and set URL in new tabs
     urls = [
+        "lol",
         "https://chrome.google.com/webstore/detail/auto-clicker-autofill/iapifmceeokikomajpccajhjpacjmibe",
         "https://chrome.google.com/webstore/detail/capmonster-cloud-%E2%80%94-automa/pabjfbciaedomjjfelfafejkppknjleh",
         "https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn",
         "https://chrome.google.com/webstore/detail/free-vpn-zenmate-best-vpn/fdcgdnkidjaadafnichfpabhfomcebme",
-        "https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn",
         "https://chrome.google.com/webstore/detail/auto-refresh-plus-page-mo/hgeljhfekpckiiplhkigfehkdpldcggm"
     ]
 
@@ -34,7 +34,7 @@ if __name__ == "__main__":
         execute_xdotool_command("key --clearmodifiers ctrl+t")
         execute_xdotool_command("key --clearmodifiers ctrl+l")
         sleep(1)
-        execute_xdotool_command(f"type '{url}'")
+        execute_xdotool_command(f"type {url}")
         execute_xdotool_command("key --clearmodifiers Return")
         sleep(1)
     
