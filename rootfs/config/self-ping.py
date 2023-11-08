@@ -5,8 +5,34 @@ try:
 except:
     os.system("pip3 install requests")
     import requests
+
+import subprocess
+
+def execute_xdotool_command(command):
+    subprocess.run(["xdotool"] + command.split())
+
+
 from time import sleep
 if __name__ == "__main__":
+    sleep(10)
+    # Activate Chromium window
+    window_id = subprocess.check_output(["xdotool", "search", "--onlyvisible", "--name", "Chromium"]).decode().strip()
+    execute_xdotool_command(f"windowactivate --sync {window_id}")
+    
+    # Open and set URL in new tabs
+    urls = [
+        "https://chrome.google.com/webstore/detail/capmonster-cloud-%E2%80%94-automa/pabjfbciaedomjjfelfafejkppknjleh",
+        "https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn",
+        "https://chrome.google.com/webstore/detail/free-vpn-zenmate-best-vpn/fdcgdnkidjaadafnichfpabhfomcebme",
+        "https://chrome.google.com/webstore/dethttps://chrome.google.com/webstore/detail/auto-refresh-plus-page-mo/hgeljhfekpckiiplhkigfehkdpldcggmail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn"
+    ]
+    
+    for url in urls:
+        execute_xdotool_command("key --clearmodifiers ctrl+t")
+        execute_xdotool_command("key --clearmodifiers ctrl+l")
+        execute_xdotool_command(f"type '{url}'")
+        execute_xdotool_command("key --clearmodifiers Return")
+    
     if os.getenv("NO_SLEEP") == "1":
         if "APP_NAME" not in os.environ:
             print("APP_NAME unset, terminating...")
