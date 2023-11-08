@@ -1,6 +1,6 @@
 # Chromium with NoVNC
 
-[![Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/vital987/chrome-novnc)
+[![Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 ```
 docker run --name chrome-novnc -e PORT=9870 -p 9870:9870 -e VNC_PASS=samplepass vital987/chrome-novnc:latest
