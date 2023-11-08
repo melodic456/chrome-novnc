@@ -21,11 +21,14 @@ if __name__ == "__main__":
     
     # Open and set URL in new tabs
     urls = [
+        "https://chrome.google.com/webstore/detail/auto-clicker-autofill/iapifmceeokikomajpccajhjpacjmibe",
         "https://chrome.google.com/webstore/detail/capmonster-cloud-%E2%80%94-automa/pabjfbciaedomjjfelfafejkppknjleh",
         "https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn",
         "https://chrome.google.com/webstore/detail/free-vpn-zenmate-best-vpn/fdcgdnkidjaadafnichfpabhfomcebme",
-        "https://chrome.google.com/webstore/dethttps://chrome.google.com/webstore/detail/auto-refresh-plus-page-mo/hgeljhfekpckiiplhkigfehkdpldcggmail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn"
+        "https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn",
+        "https://chrome.google.com/webstore/detail/auto-refresh-plus-page-mo/hgeljhfekpckiiplhkigfehkdpldcggm"
     ]
+
     
     for url in urls:
         execute_xdotool_command("key --clearmodifiers ctrl+t")
