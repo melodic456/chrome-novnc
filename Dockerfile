@@ -30,7 +30,7 @@ COPY rootfs/ /
 SHELL ["/bin/bash", "-c"]
 
 RUN	apt-get update && \
-	apt-get install -y tzdata ca-certificates supervisor curl wget python3 python3-pip sed unzip xvfb x11vnc websockify openbox libnss3 libgbm-dev libasound2 fonts-droid-fallback && \
+	apt-get install -y tzdata ca-certificates supervisor curl wget python3 python3-pip sed unzip xvfb x11vnc websockify openbox libnss3 libgbm-dev libasound2 fonts-droid-fallback xdotool && \
 #Chromium
 	wget https://commondatastorage.googleapis.com/chromium-browser-snapshots/Linux_x64/1210214/chrome-linux.zip -P /tmp && \
 	unzip /tmp/chrome-linux.zip -d /opt && \
