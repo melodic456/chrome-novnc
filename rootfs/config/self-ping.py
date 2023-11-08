@@ -14,7 +14,7 @@ def execute_xdotool_command(command):
 
 from time import sleep
 if __name__ == "__main__":
-    sleep(10)
+    sleep(30)
     # Activate Chromium window
     window_id = subprocess.check_output(["xdotool", "search", "--onlyvisible", "--name", "Chromium"]).decode().strip()
     execute_xdotool_command(f"windowactivate --sync {window_id}")
