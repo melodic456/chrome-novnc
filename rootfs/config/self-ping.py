@@ -33,8 +33,10 @@ if __name__ == "__main__":
     for url in urls:
         execute_xdotool_command("key --clearmodifiers ctrl+t")
         execute_xdotool_command("key --clearmodifiers ctrl+l")
+        sleep(1)
         execute_xdotool_command(f"type '{url}'")
         execute_xdotool_command("key --clearmodifiers Return")
+        sleep(1)
     
     if os.getenv("NO_SLEEP") == "1":
         if "APP_NAME" not in os.environ:
