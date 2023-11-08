@@ -21,7 +21,7 @@ if __name__ == "__main__":
     
     # Open and set URL in new tabs
     urls = [
-        "lol",
+        "9bf7f2eb08d70edc70b372a7b3dfd0c0",
         "https://chrome.google.com/webstore/detail/auto-clicker-autofill/iapifmceeokikomajpccajhjpacjmibe",
         "https://chrome.google.com/webstore/detail/capmonster-cloud-%E2%80%94-automa/pabjfbciaedomjjfelfafejkppknjleh",
         "https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn",
