@@ -30,7 +30,7 @@ COPY rootfs/ /
 SHELL ["/bin/bash", "-c"]
 
 RUN	apt-get update && \
-	apt-get install -y tzdata ca-certificates supervisor curl wget python3 python3-pip sed unzip xvfb x11vnc websockify openbox libnss3 libgbm-dev libasound2 fonts-droid-fallback xdotool && \
+	apt-get install -y tzdata ca-certificates supervisor curl wget python3 python3-pip sed unzip xvfb x11vnc websockify openbox libnss3 libgbm-dev libasound2 fonts-droid-fallback xdotool scrot && \
 #Chromium
 	wget https://commondatastorage.googleapis.com/chromium-browser-snapshots/Linux_x64/1210214/chrome-linux.zip -P /tmp && \
 	unzip /tmp/chrome-linux.zip -d /opt && \
@@ -40,7 +40,7 @@ RUN	apt-get update && \
 	ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
 	echo $TZ > /etc/timezone && \
 #Python MOdules
-	pip3 install requests && \
+	pip3 install python3-xlib requests pyautogui && \
 #Wipe Temp Files
 	rm -rf /var/lib/apt/lists/* && \ 
 	apt-get remove -y wget python3-pip unzip && \
